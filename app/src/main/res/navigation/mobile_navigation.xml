@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/fragment_kinopoisk">
+
+    <fragment
+        android:id="@+id/fragment_kinopoisk"
+        android:name="com.mhl.cinemarate.ui.kinopoisk.KinopoiskFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_kinopoisk" >
+        <action
+            android:id="@+id/action_fragment_kinopoisk_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_imdb"
+        android:name="com.mhl.cinemarate.ui.imdb.ImdbFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_imdb" >
+        <action
+            android:id="@+id/action_fragment_imdb_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.mhl.cinemarate.ui.movie.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
+
+
+</navigation>
